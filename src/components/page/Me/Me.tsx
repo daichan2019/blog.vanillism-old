@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-export const About: FC = () => {
+export const Me: FC = () => {
   const title = 'アバウト';
 
   return (
