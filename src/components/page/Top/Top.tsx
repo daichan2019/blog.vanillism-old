@@ -1,12 +1,15 @@
 import type { FC } from 'react';
 
-import { Button } from '@/components/ui/ui-elements/Button';
+import { Header } from '@/components/ui/layouts/Header';
 
 export const Top: FC = () => {
   return (
-    <div>
-      <h1>top page!</h1>
-      <Button />
+    <div className='bg-neutral-50'>
+      <Header />
+      <div className='flex'>
+        <main className='max-w-2xl'></main>
+        <aside></aside>
+      </div>
     </div>
   );
 };
