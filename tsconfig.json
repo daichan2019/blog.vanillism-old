@@ -6,6 +6,7 @@
       "@/globalStates/*": ["./src/globalStates/*"],
       "@/lib/*": ["./src/lib/*"],
       "@/config/*": ["./src/config/*"],
+      "@/api/*": ["./src/api/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/public/*": ["./public/*"]
     },
