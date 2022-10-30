@@ -1,5 +1,5 @@
 const aspidaConfig = {
-  input: 'src/api',
+  input: 'src/lib/cms/api',
   outputMode: 'aliasOnly',
 };
 
