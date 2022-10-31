@@ -1,23 +1,20 @@
 import type { NextPage } from 'next';
+import { useEffect } from 'react';
 
 import { Top } from '@/components/page/Top';
 import { client } from '@/lib/cms/utils/index';
 
-const Home: NextPage = ({ blogs }) => {
-  console.log(blogs);
+const Home: NextPage = () => {
+  useEffect(() => {
+    const fetchArticle = async () => {
+      const res = await client.blogs.$get({});
+
+      console.log(res);
+    };
+    fetchArticle();
+  }, []);
 
   return <Top />;
 };
 
 export default Home;
-
-export const getStaticProps = async () => {
-  // const blog = await client.blogs.get({ query: { limit: 6 } });
-  const blogs = await client.blogs.$get();
-
-  return {
-    props: {
-      blogs,
-    },
-  };
-};
