@@ -1,4 +1,4 @@
-import aspida from '@aspida/axios';
+import aspida from '@aspida/fetch';
 import axios from 'axios';
 
 import { API_BASE_URL, API_KEY } from '@/config/index';
@@ -9,4 +9,4 @@ const fetchConfig: Required<Parameters<typeof aspida>>[1] = {
   headers: { 'X-MICROCMS-API-KEY': API_KEY },
 };
 
-export const client = api(aspida(axios, fetchConfig));
+export const client = api(aspida(fetch, fetchConfig));
