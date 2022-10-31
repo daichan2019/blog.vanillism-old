@@ -1,5 +1,4 @@
 import aspida from '@aspida/fetch';
-import axios from 'axios';
 
 import { API_BASE_URL, API_KEY } from '@/config/index';
 import api from '@/lib/cms/api/$api';
