@@ -10,7 +10,7 @@ questions:
 # `{{ inputs.value }}/index.ts`
 
 ```javascript
-import { ContentQuery, EndPoints } from 'src/lib/cms/types/response'
+import { ContentQuery, EndPoints } from 'src/lib/cms/types'
 
 export type Methods = {
   get: {
