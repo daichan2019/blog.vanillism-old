@@ -1,10 +1,11 @@
 import type { FC } from 'react';
 
+import { BlogCard } from '@/components/model/blog/BlogCard';
 import { Header } from '@/components/ui/layouts/Header';
 import type { EndPoints } from '@/lib/cms/types';
 
 type Props = {
-  blogs: EndPoints['gets']['blogs'][];
+  blogs: EndPoints['get']['blogs'][];
 };
 
 export const Top: FC<Props> = ({ blogs }) => {
@@ -17,20 +18,10 @@ export const Top: FC<Props> = ({ blogs }) => {
             {blogs.map((blog) => {
               return (
                 <li key={blog.id}>
-                  <div>{blog.title}</div>
+                  <BlogCard blog={blog} />
                 </li>
               );
             })}
-            {/* {blogs.map((blog) => {
-              return (
-                <li key={blog.id}>
-                  <BlogCard>
-                    <BlogCard.Title>{blog.title}</BlogCard.Title>
-                    <BlogCard.CreatedAt>{blog.createdAt}</BlogCard.CreatedAt>
-                  </BlogCard>
-                </li>
-              );
-            })} */}
           </ul>
         </main>
         <aside></aside>

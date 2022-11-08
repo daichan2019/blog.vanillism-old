@@ -13,7 +13,7 @@ const Home: NextPage<Props> = ({ blogs }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const blogs = await client.blogs.$get({ query: { limit: 20 } });
+  const blogs = await (await client.blogs.$get({ query: { limit: 20 } })).contents;
 
   return {
     props: { blogs },
