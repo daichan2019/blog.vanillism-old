@@ -1,3 +1,7 @@
 **/node_modules/*
 **/out/*
 **/.next/*
+src/lib/cms/api/**/*
+**/$api.ts
+src/lib/cms/schema/*
+src/lib/cms/types/*

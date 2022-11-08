@@ -1,19 +1,38 @@
-import useAspidaSWR from '@aspida/swr';
 import type { FC } from 'react';
 
 import { Header } from '@/components/ui/layouts/Header';
-import { client } from '@/lib/cms/utils/index';
+import type { EndPoints } from '@/lib/cms/types';
 
-export const Top: FC = () => {
-  const { data, error } = useAspidaSWR(client.blogs, { query: { limit: 10 } });
+type Props = {
+  blogs: EndPoints['gets']['blogs'][];
+};
 
-  console.log(data);
-
+export const Top: FC<Props> = ({ blogs }) => {
   return (
     <div className='bg-neutral-50'>
       <Header />
       <div className='flex'>
-        <main className='max-w-2xl'></main>
+        <main className='max-w-2xl'>
+          <ul>
+            {blogs.map((blog) => {
+              return (
+                <li key={blog.id}>
+                  <div>{blog.title}</div>
+                </li>
+              );
+            })}
+            {/* {blogs.map((blog) => {
+              return (
+                <li key={blog.id}>
+                  <BlogCard>
+                    <BlogCard.Title>{blog.title}</BlogCard.Title>
+                    <BlogCard.CreatedAt>{blog.createdAt}</BlogCard.CreatedAt>
+                  </BlogCard>
+                </li>
+              );
+            })} */}
+          </ul>
+        </main>
         <aside></aside>
       </div>
     </div>

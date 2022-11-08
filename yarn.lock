@@ -3139,6 +3139,11 @@ react-error-boundary@3.1.4:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+react-headings@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-headings/-/react-headings-3.2.0.tgz#a22386f3979333e181328bbaa1e843e833e26d40"
+  integrity sha512-i7azOVlKUbCVx6fL6RSnrs2AJWFJiUGx1H+hQHiPsIUbV6eHJO6fnZlNnF19DBt77I9aJZv8x8MDwVKl7oiftg==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
