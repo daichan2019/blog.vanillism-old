@@ -12,19 +12,20 @@ export const Top: FC<Props> = ({ blogs }) => {
   return (
     <div className='bg-neutral-50'>
       <Header />
-      <div className='flex'>
-        <main className='max-w-2xl'>
-          <ul>
-            {blogs.map((blog) => {
-              return (
-                <li key={blog.id}>
-                  <BlogCard blog={blog} />
-                </li>
-              );
-            })}
-          </ul>
-        </main>
-        <aside></aside>
+      <div className='py-12'>
+        <div className='container m-auto flex flex-1'>
+          <main>
+            <ul>
+              {blogs.map((blog) => {
+                return (
+                  <li key={blog.id}>
+                    <BlogCard blog={blog} />
+                  </li>
+                );
+              })}
+            </ul>
+          </main>
+        </div>
       </div>
     </div>
   );

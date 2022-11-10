@@ -8,8 +8,9 @@ type NavigationItem = {
 };
 
 const navigation = [
-  { name: 'Me', path: '/me' },
   { name: 'Articles', path: '/articles' },
+  { name: 'Categories', path: '/categories' },
+  { name: 'Me', path: '/me' },
 ] as NavigationItem[];
 
 export const Header: FC = () => {
