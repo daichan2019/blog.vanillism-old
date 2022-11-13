@@ -8,6 +8,7 @@
       "required": true,
       "isUnique": false
     },
+    { "fieldId": "summary", "name": "サマリー", "kind": "textArea", "required": true },
     { "fieldId": "content", "name": "内容", "kind": "richEditor", "required": true },
     { "fieldId": "eyecatch", "name": "アイキャッチ", "kind": "media" },
     { "fieldId": "category", "name": "カテゴリ", "kind": "relation" }

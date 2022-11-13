@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import type { FC } from 'react';
 import { formatDate } from 'src/utils/formatDate';
 
+import { Anchor } from '@/components/ui/ui-elements/Anchor';
 import type { EndPoints } from '@/lib/cms/types';
 
 type Props = {
@@ -22,17 +22,31 @@ export const BlogCard: FC<Props> = ({ blog }) => {
           <div className='space-y-6'>
             <div>
               <h2 className='text-2xl font-bold leading-8 tracking-tight'>
-                <Link href={`/blog/${blog.id}`} className='text-gray-900 dark:text-gray-100'>
+                <Anchor
+                  as='internal'
+                  href={`/articles/${blog.id}`}
+                  className='text-gray-900 dark:text-gray-100'
+                >
                   {blog.title}
-                </Link>
+                </Anchor>
               </h2>
-              <p className='flex flex-wrap'>{blog.category.name}</p>
+              <Anchor
+                as='internal'
+                href={`/categories/${blog.category.id}`}
+                className='flex text-sm font-medium text-orange-500 hover:text-orange-600 dark:hover:text-orange-500'
+              >
+                {blog.category.name}
+              </Anchor>
             </div>
-            <div className='prose max-w-none text-gray-500 dark:text-gray-400'>hogehogehoge</div>
+            <p className='prose max-w-none text-gray-500 line-clamp-3 dark:text-gray-400'>
+              {blog.summary}
+            </p>
           </div>
           <div className='text-base font-medium leading-6'>
             <div className=''>
-              <Link href={`/blog/${blog.id}`}>Read more &rarr;</Link>
+              <Anchor as='internal' href={`/articles/${blog.id}`}>
+                Read more &rarr;
+              </Anchor>
             </div>
           </div>
         </div>

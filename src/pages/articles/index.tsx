@@ -6,14 +6,15 @@ import { client } from '@/lib/cms/utils';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const Home: NextPage<Props> = ({ blogs }) => {
+const ArticlesPage: NextPage<Props> = ({ blogs }) => {
   return <Top blogs={blogs} />;
 };
 
-export default Home;
+export default ArticlesPage;
 
 export const getStaticProps = async () => {
   const data = await client.blogs.$get({ query: { limit: 20 } });
+
   const blogs = data.contents;
 
   return {

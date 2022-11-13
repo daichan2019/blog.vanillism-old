@@ -17,13 +17,17 @@ export const Header: FC = () => {
   return (
     <header className='py-6'>
       <div className='mx-3 flex max-w-5xl justify-between lg:mx-auto'>
-        <h1>blog.vanillism</h1>
+        <h1>
+          <Anchor as='internal' href='/'>
+            blog.vanillism
+          </Anchor>
+        </h1>
         <nav>
           <ul className='flex gap-4'>
             {navigation.map((item) => {
               return (
                 <li key={item.name}>
-                  <Anchor to='internal' href={item.path}>
+                  <Anchor as='internal' href={item.path}>
                     {item.name}
                   </Anchor>
                 </li>

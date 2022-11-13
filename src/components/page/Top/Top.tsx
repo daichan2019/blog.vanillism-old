@@ -13,7 +13,7 @@ export const Top: FC<Props> = ({ blogs }) => {
     <div className='bg-neutral-50'>
       <Header />
       <div className='py-12'>
-        <div className='container m-auto flex flex-1'>
+        <div className='container m-auto flex max-w-5xl flex-1'>
           <main>
             <ul>
               {blogs.map((blog) => {

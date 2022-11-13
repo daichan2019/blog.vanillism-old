@@ -1,25 +1,25 @@
 import Link from 'next/link';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
 type Props = {
-  to: 'external' | 'internal';
+  as: 'external' | 'internal';
   href: string;
-  children: string;
+  children: ReactNode;
   className?: string;
 };
 
-export const Anchor: FC<Props> = ({ children, className, href, to }) => {
-  if (to === 'external') {
+export const Anchor: FC<Props> = ({ as, children, className, href }) => {
+  if (as === 'external') {
     return (
       <a href={href} target='_blank' rel='noreferrer' className={className}>
         {children}
       </a>
     );
-  } else {
-    return (
-      <Link href={href}>
-        <a className={className}>{children}</a>
-      </Link>
-    );
   }
+
+  return (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
+  );
 };
