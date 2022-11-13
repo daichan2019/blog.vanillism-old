@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Article } from '@/components/page/Article';
 import { client } from '@/lib/cms/utils';
@@ -12,7 +13,7 @@ const ArticlePage: NextPage<Props> = ({ blog }) => {
 
 export default ArticlePage;
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const data = await client.blogs.$get();
   const blogs = data.contents;
   const paths = blogs.map((blog) => {
@@ -25,11 +26,9 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context) => {
-  const { params } = context;
-  const id = params.id;
-  const data = await client.blogs._id(id).$get();
-  console.log(data);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const id = params?.id;
+  const data = await client.blogs._id(id as string).$get();
 
   return {
     props: {
