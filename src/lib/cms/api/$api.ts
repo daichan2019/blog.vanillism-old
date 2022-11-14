@@ -2,13 +2,13 @@ import type { AspidaClient } from 'aspida'
 import { dataToURLString } from 'aspida'
 import type { Methods as Methods0 } from './blogs'
 import type { Methods as Methods1 } from './blogs/_id@string'
-import type { Methods as Methods2 } from './categories'
-import type { Methods as Methods3 } from './categories/_id@string'
+import type { Methods as Methods2 } from './tags'
+import type { Methods as Methods3 } from './tags/_id@string'
 
 const api = <T>({ baseURL, fetch }: AspidaClient<T>) => {
   const prefix = (baseURL === undefined ? '' : baseURL).replace(/\/$/, '')
   const PATH0 = '/blogs'
-  const PATH1 = '/categories'
+  const PATH1 = '/tags'
   const GET = 'GET'
 
   return {
@@ -32,7 +32,7 @@ const api = <T>({ baseURL, fetch }: AspidaClient<T>) => {
       $path: (option?: { method?: 'get' | undefined; query: Methods0['get']['query'] } | undefined) =>
         `${prefix}${PATH0}${option && option.query ? `?${dataToURLString(option.query)}` : ''}`
     },
-    categories: {
+    tags: {
       _id: (val1: string) => {
         const prefix1 = `${PATH1}/${val1}`
 
