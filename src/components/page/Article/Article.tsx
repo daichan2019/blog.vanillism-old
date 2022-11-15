@@ -1,10 +1,9 @@
 import type { FC } from 'react';
 import { formatDate } from 'src/utils/formatDate';
 
-import { Header } from '@/components/ui/layouts/Header';
-import { Anchor } from '@/components/ui/ui-elements/Anchor';
+import { Header } from '@/components/layout/Header';
+import { Tag } from '@/components/model/tag/Tag';
 import type { EndPoints } from '@/lib/cms/types';
-import HashIcon from '@/public/img/hash.svg';
 
 type Props = {
   blog: EndPoints['get']['blogs'];
@@ -23,14 +22,15 @@ export const Article: FC<Props> = ({ blog }) => {
             <time className='text-gray-600' dateTime={blog.createdAt}>
               {formatDate(blog.createdAt)}
             </time>
-            <Anchor
-              as='internal'
-              href={`/categories/${blog.category.id}`}
-              className='my-2 flex w-fit items-center rounded-md border border-orange-500 px-2 py-1 text-orange-500'
-            >
-              <HashIcon />
-              <span>{blog.category.name}</span>
-            </Anchor>
+            <ul className='my-2 flex gap-2'>
+              {blog.tags.map((tag) => {
+                return (
+                  <li key={tag.id}>
+                    <Tag tag={tag} />
+                  </li>
+                );
+              })}
+            </ul>
             <div
               className='prose pt-7 text-black'
               dangerouslySetInnerHTML={{ __html: `${blog.content}` }}

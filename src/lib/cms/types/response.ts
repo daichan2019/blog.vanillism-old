@@ -17,61 +17,60 @@ type Structure<T, P> = T extends 'get'
   ? GetsType<{ id: string } & DateType & Required<P>>
   : Partial<DateType> & (T extends 'patch' ? Partial<P> : P);
 
-export type categories<T = 'get'> = Structure<
-  T,
-  {
-    /**
-     * カテゴリ名
-     */
-    name: string;
-  }
->;
+export type tags<T='get'> = Structure<
+T,
+{
+  /**
+   * タグ名
+   */
+  name: string
+}>
 
-export type blogs<T = 'get'> = Structure<
-  T,
-  {
-    /**
-     * タイトル
-     */
-    title: string;
-    /**
-     * サマリー
-     */
-    summary: string;
-    /**
-     * 内容
-     */
-    content: string;
-    /**
-     * アイキャッチ
-     */
-    eyecatch?: { url: string; width: number; height: number };
-    /**
-     * カテゴリ
-     */
-    category?: Reference<T, unknown | null>;
-  }
->;
+export type blogs<T='get'> = Structure<
+T,
+{
+  /**
+   * タイトル
+   */
+  title: string
+  /**
+   * サマリー
+   */
+  summary: string
+  /**
+   * 内容
+   */
+  content: string
+  /**
+   * アイキャッチ
+   */
+  eyecatch?: { url: string, width: number, height: number }
+  /**
+   * タグ
+   */
+  tags?: Reference<T,unknown>[]
+}>
+
 
 export interface EndPoints {
   get: {
-    categories: categories<'get'>;
-    blogs: blogs<'get'>;
-  };
+    'tags': tags<'get'>
+    'blogs': blogs<'get'>
+  }
   gets: {
-    categories: categories<'gets'>;
-    blogs: blogs<'gets'>;
-  };
+    'tags': tags<'gets'>
+    'blogs': blogs<'gets'>
+  }
   post: {
-    categories: categories<'post'>;
-    blogs: blogs<'post'>;
-  };
+    'tags': tags<'post'>
+    'blogs': blogs<'post'>
+  }
   put: {
-    categories: categories<'put'>;
-    blogs: blogs<'put'>;
-  };
+    'tags': tags<'put'>
+    'blogs': blogs<'put'>
+  }
   patch: {
-    categories: categories<'patch'>;
-    blogs: blogs<'patch'>;
-  };
+    'tags': tags<'patch'>
+    'blogs': blogs<'patch'>
+  }
 }

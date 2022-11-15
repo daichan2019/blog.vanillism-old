@@ -9,7 +9,7 @@ type NavigationItem = {
 
 const navigation = [
   { name: 'Articles', path: '/articles' },
-  { name: 'Categories', path: '/categories' },
+  { name: 'Tags', path: '/tags' },
   { name: 'Me', path: '/me' },
 ] as NavigationItem[];
 
