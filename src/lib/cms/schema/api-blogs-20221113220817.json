@@ -1,1 +1,17 @@
-{"apiFields":[{"idValue":"zwO3YW7V7w","fieldId":"title","name":"タイトル","kind":"text","required":true,"isUnique":false},{"fieldId":"summary","name":"サマリー","kind":"textArea","required":true},{"fieldId":"content","name":"内容","kind":"richEditor","required":true},{"fieldId":"eyecatch","name":"アイキャッチ","kind":"media"},{"fieldId":"tags","name":"タグ","kind":"relationList"}],"customFields":[]}
+{
+  "apiFields": [
+    {
+      "idValue": "zwO3YW7V7w",
+      "fieldId": "title",
+      "name": "タイトル",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    { "fieldId": "summary", "name": "サマリー", "kind": "textArea", "required": true },
+    { "fieldId": "content", "name": "内容", "kind": "richEditor", "required": true },
+    { "fieldId": "eyecatch", "name": "アイキャッチ", "kind": "media" },
+    { "fieldId": "tags", "name": "タグ", "kind": "relationList" }
+  ],
+  "customFields": []
+}

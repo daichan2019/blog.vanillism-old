@@ -45,5 +45,3 @@ export const SocialIcon: FC<Props> = ({ href, kind, size = 'sm' }) => {
     </Anchor>
   );
 };
-
-export default SocialIcon;

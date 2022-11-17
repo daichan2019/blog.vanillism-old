@@ -14,7 +14,6 @@ export default TagsPage;
 
 export const getStaticProps = async () => {
   const data = await client.tags.$get();
-
   const tags = data.contents;
 
   return {
