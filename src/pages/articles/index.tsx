@@ -1,23 +1,25 @@
 import type { NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
 
-import { Top } from '@/components/page/Top';
+import { Articles } from '@/components/page/Articles';
+import { PER_PAGE } from '@/config/index';
 import { client } from '@/lib/cms/utils';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const ArticlesPage: NextPage<Props> = ({ blogs }) => {
-  return <Top blogs={blogs} />;
+const ArticlesPage: NextPage<Props> = ({ blogs, totalCount }) => {
+  return <Articles blogs={blogs} totalCount={totalCount} />;
 };
 
 export default ArticlesPage;
 
 export const getStaticProps = async () => {
-  const data = await client.blogs.$get({ query: { limit: 20 } });
+  const data = await client.blogs.$get({ query: { limit: PER_PAGE } });
 
   const blogs = data.contents;
+  const totalCount = data.totalCount;
 
   return {
-    props: { blogs },
+    props: { blogs, totalCount },
   };
 };
