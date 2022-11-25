@@ -12,7 +12,7 @@ type Props = {
 export const BlogCard: FC<Props> = ({ blog }) => {
   return (
     <article>
-      <div className='space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0'>
+      <div className='space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0 py-12'>
         <dl>
           <dt className='sr-only'>Published on</dt>
           <dd className='text-base font-medium leading-6 text-gray-500'>
@@ -27,7 +27,7 @@ export const BlogCard: FC<Props> = ({ blog }) => {
                   {blog.title}
                 </Anchor>
               </h2>
-              <ul className='my-2 flex gap-2 sm:gap-3 md:gap-4'>
+              <ul className='my-2 flex gap-2 sm:gap-3 md:gap-4 flex-wrap'>
                 {blog.tags.map((tag) => {
                   return (
                     <li key={tag.id}>
@@ -41,7 +41,11 @@ export const BlogCard: FC<Props> = ({ blog }) => {
           </div>
           <div className='text-base font-medium leading-6'>
             <div className=''>
-              <Anchor as='internal' href={`/articles/${blog.id}`}>
+              <Anchor
+                as='internal'
+                href={`/articles/${blog.id}`}
+                className='hover:text-orange-500 transition-colors'
+              >
                 Read more &rarr;
               </Anchor>
             </div>

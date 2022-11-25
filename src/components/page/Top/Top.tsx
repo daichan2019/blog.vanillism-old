@@ -11,7 +11,7 @@ type Props = {
 export const Top: FC<Props> = ({ blogs }) => {
   return (
     <DefaultLayout>
-      <ul>
+      <ul className='divide-y divide-gray-200'>
         {blogs.map((blog) => {
           return (
             <li key={blog.id}>

@@ -15,9 +15,9 @@ export const Footer: FC = () => {
         </div>
         <div className='mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400'>
           <p>{siteMetadata.author}</p>
-          <div>{` • `}</div>
+          <div>{` | `}</div>
           <p>{`© ${new Date().getFullYear()}`}</p>
-          <div>{` • `}</div>
+          <div>{` | `}</div>
           <Anchor as='internal' href='/'>
             {siteMetadata.title}
           </Anchor>
