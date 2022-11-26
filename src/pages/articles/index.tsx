@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
 
 import { Articles } from '@/components/page/Articles';
@@ -13,7 +13,7 @@ const ArticlesPage: NextPage<Props> = ({ blogs, totalCount }) => {
 
 export default ArticlesPage;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await client.blogs.$get({ query: { limit: PER_PAGE } });
 
   const blogs = data.contents;

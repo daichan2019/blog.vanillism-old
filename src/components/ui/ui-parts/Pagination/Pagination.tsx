@@ -19,7 +19,7 @@ export const Pagination = ({ totalCount }: Props) => {
       {range(1, pageCount).map((number, index) => {
         return (
           <li key={index}>
-            <Anchor as='internal' href={`articles/page/${number}`}>
+            <Anchor as='internal' href={`/articles/page/${number}`}>
               {number}
             </Anchor>
           </li>
