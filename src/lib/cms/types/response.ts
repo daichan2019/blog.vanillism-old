@@ -50,28 +50,74 @@ export type blogs<T = 'get'> = Structure<
      * タグ
      */
     tags?: Reference<T, tags>[];
+    /**
+     * 著者
+     */
+    author: Reference<T, authors>;
   }
 >;
+
+export type authors<T = 'get'> = Structure<
+  T,
+  {
+    /**
+     * 名前
+     */
+    name: string;
+    /**
+     * スラッグ
+     */
+    slug: string;
+    /**
+     * 自己紹介
+     */
+    introduction?: string;
+    /**
+     * SNS
+     */
+    socialMedias?: authors_socialMedia[];
+  }
+>;
+
+interface authors_socialMedia {
+  /**
+   * SNS名
+   */
+  name: ['GitHub' | 'Twitter' | 'Zenn'];
+  /**
+   * URL
+   */
+  url: string;
+  /**
+   * アイコン
+   */
+  icon: { url: string; width: number; height: number };
+}
 
 export interface EndPoints {
   get: {
     tags: tags<'get'>;
     blogs: blogs<'get'>;
+    authors: authors<'get'>;
   };
   gets: {
     tags: tags<'gets'>;
     blogs: blogs<'gets'>;
+    authors: authors<'gets'>;
   };
   post: {
     tags: tags<'post'>;
     blogs: blogs<'post'>;
+    authors: authors<'post'>;
   };
   put: {
     tags: tags<'put'>;
     blogs: blogs<'put'>;
+    authors: authors<'put'>;
   };
   patch: {
     tags: tags<'patch'>;
     blogs: blogs<'patch'>;
+    authors: authors<'patch'>;
   };
 }

@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
 
 import { Top } from '@/components/page/Top';
@@ -12,7 +12,7 @@ const Home: NextPage<Props> = ({ blogs }) => {
 
 export default Home;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await client.blogs.$get({ query: { limit: 20 } });
   const blogs = data.contents;
 
