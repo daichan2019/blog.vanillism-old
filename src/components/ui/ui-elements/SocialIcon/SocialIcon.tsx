@@ -38,7 +38,7 @@ export const SocialIcon: FC<Props> = ({ href, kind, size = 'sm' }) => {
       <span className='sr-only'>{kind}</span>
       <SocialSvg
         className={clsx(
-          'fill-current transition-colors text-gray-700 hover:text-orange-500 ',
+          'fill-current transition-colors text-gray-700 hover:text-orange-500',
           sizes[size],
         )}
       />
