@@ -19,10 +19,10 @@ export const DrawerTransition: FC<Props> = ({ children, isOpen, onClose }) => {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
         >
-          <Dialog.Overlay className='bg-opacity-40 z-30 bg-gray-500 absolute inset-0' />
+          <Dialog.Overlay className='bg-opacity-40 z-30 bg-gray-500 fixed inset-0' />
         </Transition.Child>
         <Transition.Child
-          className='absolute inset-0 z-40 flex'
+          className='absolute inset-0 z-40 flex left-auto'
           enter='transition ease duration-250 transform'
           enterFrom='-translate-x-0'
           enterTo='translate-x-0'
@@ -30,7 +30,9 @@ export const DrawerTransition: FC<Props> = ({ children, isOpen, onClose }) => {
           leaveFrom='translate-x-0'
           leaveTo='translate-x-full'
         >
-          {children}
+          <Dialog.Panel className='min-w-[200px] bg-white py-6 px-4 flex-1 border-l overflow-hidden shadow-xl transition-all w-full max-w-sm'>
+            {children}
+          </Dialog.Panel>
         </Transition.Child>
       </Dialog>
     </Transition>
