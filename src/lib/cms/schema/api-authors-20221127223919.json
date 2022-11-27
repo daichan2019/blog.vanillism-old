@@ -1,0 +1,67 @@
+{
+  "apiFields": [
+    {
+      "idValue": "O_76oh-O90",
+      "fieldId": "name",
+      "name": "名前",
+      "kind": "text",
+      "required": true,
+      "selectItems": [
+        { "id": "m61KRZv87R", "value": "GitHub" },
+        { "id": "al0YUIle9j", "value": "Twitter" },
+        { "id": "FmyJ6Xj_Rg", "value": "Zenn" }
+      ],
+      "multipleSelect": false,
+      "isUnique": false
+    },
+    { "fieldId": "slug", "name": "スラッグ", "kind": "text", "required": true, "isUnique": false },
+    { "fieldId": "introduction", "name": "自己紹介", "kind": "richEditor" },
+    {
+      "fieldId": "socialMedias",
+      "name": "SNS",
+      "kind": "repeater",
+      "customFieldCreatedAt": "2022-11-17T13:37:03.492Z",
+      "customFieldCreatedAtList": ["2022-11-17T13:37:03.492Z"],
+      "isUnique": false
+    }
+  ],
+  "customFields": [
+    {
+      "createdAt": "2022-11-17T13:37:03.492Z",
+      "fieldId": "socialMedia",
+      "name": "SNS",
+      "fields": [
+        {
+          "idValue": "XT_YTQe2LR",
+          "fieldId": "name",
+          "name": "SNS名",
+          "kind": "select",
+          "required": true,
+          "selectItems": [
+            { "id": "PXx8-t_umI", "value": "GitHub" },
+            { "id": "jcOui04D5q", "value": "Twitter" },
+            { "id": "bt95ccJgCi", "value": "Zenn" }
+          ],
+          "multipleSelect": false
+        },
+        {
+          "idValue": "F2uGcUgsAl",
+          "fieldId": "url",
+          "name": "URL",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "idValue": "hp5zHRZuy1",
+          "fieldId": "icon",
+          "name": "アイコン",
+          "kind": "media",
+          "required": true
+        }
+      ],
+      "position": [["XT_YTQe2LR", "F2uGcUgsAl", "hp5zHRZuy1"]],
+      "updatedAt": "2022-11-17T13:43:58.221Z",
+      "viewerGroup": "Dkn"
+    }
+  ]
+}

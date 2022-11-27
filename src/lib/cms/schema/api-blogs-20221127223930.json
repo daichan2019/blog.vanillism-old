@@ -11,7 +11,13 @@
     { "fieldId": "summary", "name": "サマリー", "kind": "textArea", "required": true },
     { "fieldId": "content", "name": "内容", "kind": "richEditor", "required": true },
     { "fieldId": "eyecatch", "name": "アイキャッチ", "kind": "media" },
-    { "fieldId": "tags", "name": "タグ", "kind": "relationList" }
+    {
+      "fieldId": "tags",
+      "name": "タグ",
+      "kind": "relationList",
+      "relationListCountLimitValidation": { "relationListCount": { "min": null, "max": 4 } }
+    },
+    { "fieldId": "author", "name": "著者", "kind": "relation", "required": true }
   ],
   "customFields": []
 }
