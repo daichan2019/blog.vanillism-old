@@ -7,9 +7,9 @@
       "kind": "text",
       "required": true,
       "selectItems": [
-        { "id": "m61KRZv87R", "value": "github" },
-        { "id": "al0YUIle9j", "value": "twitter" },
-        { "id": "FmyJ6Xj_Rg", "value": "zenn" }
+        { "id": "m61KRZv87R", "value": "GitHub" },
+        { "id": "al0YUIle9j", "value": "Twitter" },
+        { "id": "FmyJ6Xj_Rg", "value": "Zenn" }
       ],
       "multipleSelect": false,
       "isUnique": false
@@ -23,7 +23,8 @@
       "customFieldCreatedAt": "2022-11-17T13:37:03.492Z",
       "customFieldCreatedAtList": ["2022-11-17T13:37:03.492Z"],
       "isUnique": false
-    }
+    },
+    { "fieldId": "avatar", "name": "アバター", "kind": "media" }
   ],
   "customFields": [
     {
@@ -57,10 +58,11 @@
           "name": "アイコン",
           "kind": "media",
           "required": true
-        }
+        },
+        { "idValue": "2Exz-aQPtB", "fieldId": "avatar", "name": "アバター", "kind": "media" }
       ],
-      "position": [["XT_YTQe2LR", "F2uGcUgsAl", "hp5zHRZuy1"]],
-      "updatedAt": "2022-11-17T13:43:58.221Z",
+      "position": [["XT_YTQe2LR", "F2uGcUgsAl", "hp5zHRZuy1", "2Exz-aQPtB"]],
+      "updatedAt": "2022-11-28T12:44:58.512Z",
       "viewerGroup": "Dkn"
     }
   ]
