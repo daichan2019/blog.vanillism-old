@@ -7,9 +7,9 @@
       "kind": "text",
       "required": true,
       "selectItems": [
-        { "id": "m61KRZv87R", "value": "GitHub" },
-        { "id": "al0YUIle9j", "value": "Twitter" },
-        { "id": "FmyJ6Xj_Rg", "value": "Zenn" }
+        { "id": "m61KRZv87R", "value": "github" },
+        { "id": "al0YUIle9j", "value": "twitter" },
+        { "id": "FmyJ6Xj_Rg", "value": "zenn" }
       ],
       "multipleSelect": false,
       "isUnique": false
@@ -38,9 +38,9 @@
           "kind": "select",
           "required": true,
           "selectItems": [
-            { "id": "PXx8-t_umI", "value": "GitHub" },
-            { "id": "jcOui04D5q", "value": "Twitter" },
-            { "id": "bt95ccJgCi", "value": "Zenn" }
+            { "id": "PXx8-t_umI", "value": "github" },
+            { "id": "jcOui04D5q", "value": "twitter" },
+            { "id": "bt95ccJgCi", "value": "zenn" }
           ],
           "multipleSelect": false
         },
