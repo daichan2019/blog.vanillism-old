@@ -76,6 +76,10 @@ export type authors<T = 'get'> = Structure<
      * SNS
      */
     socialMedias?: authors_socialMedia[];
+    /**
+     * アバター
+     */
+    avatar?: { url: string; width: number; height: number };
   }
 >;
 
@@ -83,7 +87,7 @@ interface authors_socialMedia {
   /**
    * SNS名
    */
-  name: ['GitHub' | 'Twitter' | 'Zenn'];
+  name: ['github' | 'twitter' | 'zenn'];
   /**
    * URL
    */
@@ -92,6 +96,10 @@ interface authors_socialMedia {
    * アイコン
    */
   icon: { url: string; width: number; height: number };
+  /**
+   * アバター
+   */
+  avatar?: { url: string; width: number; height: number };
 }
 
 export interface EndPoints {

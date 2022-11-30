@@ -13,11 +13,7 @@ const AboutMePage: NextPage<Props> = ({ author }) => {
 export default AboutMePage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await client.authors.$get();
-  const authors = data.contents;
-  const author = authors.find((author) => {
-    return author.name === 'vanilla_dev';
-  });
+  const author = await client.authors._id('vanilla_dev').$get();
 
   return {
     props: { author },

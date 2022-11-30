@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
 
 import { Tags } from '@/components/page/Tags';
@@ -12,9 +12,13 @@ const TagsPage: NextPage<Props> = ({ tags }) => {
 
 export default TagsPage;
 
-export const getStaticProps = async () => {
-  const data = await client.tags.$get();
-  const tags = data.contents;
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.blogs.$get();
+  const tags = data.contents
+    .map((blog) => {
+      return blog.tags;
+    })
+    .flat();
 
   return {
     props: { tags },
