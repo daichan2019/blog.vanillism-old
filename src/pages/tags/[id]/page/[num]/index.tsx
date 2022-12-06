@@ -9,8 +9,15 @@ import { getRange } from '@/utils/getRange';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const ArticlesFilteredByTagPage: NextPage<Props> = ({ blogs, currentPage, totalCount }) => {
-  return <Articles blogs={blogs} totalCount={totalCount} currentPage={currentPage} />;
+const ArticlesFilteredByTagPage: NextPage<Props> = ({
+  blogs,
+  currentPage,
+  pagePath,
+  totalCount,
+}) => {
+  return (
+    <Articles blogs={blogs} totalCount={totalCount} currentPage={currentPage} pagePath={pagePath} />
+  );
 };
 
 export default ArticlesFilteredByTagPage;
@@ -60,6 +67,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       blogs,
       totalCount,
       currentPage: pageNum,
+      pagePath: 'tags',
     },
   };
 };

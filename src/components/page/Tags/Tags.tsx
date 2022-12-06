@@ -38,7 +38,7 @@ export const Tags: FC<Props> = ({ tags }) => {
             <li key={tag}>
               <Anchor
                 as='internal'
-                href={`/tags/${tag}`}
+                href={`/tags/${tag}/page/1`}
                 className='sm:text-base text-sm font-semibold text-orange-500 uppercase'
               >
                 {`${tag} (${count[tag]})`}

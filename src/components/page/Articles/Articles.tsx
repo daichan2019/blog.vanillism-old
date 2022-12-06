@@ -9,10 +9,11 @@ import type { EndPoints } from '@/lib/cms/types';
 type Props = {
   blogs: EndPoints['get']['blogs'][];
   totalCount: number;
-  currentPage: number;
+  currentPage?: number;
+  pagePath?: string;
 };
 
-export const Articles: FC<Props> = ({ blogs, currentPage, totalCount }) => {
+export const Articles: FC<Props> = ({ blogs, pagePath, totalCount }) => {
   return (
     <DefaultLayout>
       <h2 className='border-b-[1px] md:leading-10 text-3xl font-extrabold sm:text-4xl sm:leading-10 md:text-6xl pb-6'>
@@ -27,7 +28,9 @@ export const Articles: FC<Props> = ({ blogs, currentPage, totalCount }) => {
           );
         })}
       </ul>
-      {totalCount > PER_PAGE && <Pagination totalCount={totalCount} />}
+      {totalCount > PER_PAGE && (
+        <Pagination totalCount={totalCount} pagePath={pagePath as string} />
+      )}
     </DefaultLayout>
   );
 };

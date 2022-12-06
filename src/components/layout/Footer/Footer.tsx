@@ -8,12 +8,12 @@ export const Footer: FC = () => {
   return (
     <footer className='py-4 md:py-6'>
       <div className='flex flex-col items-center'>
-        <div className='mb-3 flex space-x-4'>
+        <div className='flex space-x-4'>
           <SocialIcon kind='github' href={siteMetadata.github} size='sm' />
           <SocialIcon kind='twitter' href={siteMetadata.twitter} size='sm' />
           <SocialIcon kind='zenn' href={siteMetadata.zenn} size='sm' />
         </div>
-        <div className='mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400'>
+        <div className='mt-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400'>
           <p>{siteMetadata.author}</p>
           <div>{` | `}</div>
           <p>{`© ${new Date().getFullYear()}`}</p>
