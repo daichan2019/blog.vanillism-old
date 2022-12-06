@@ -48,12 +48,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     query: {
       offset: (pageNum - 1) * PER_PAGE,
       limit: PER_PAGE,
-      filters: `tags[contains]${tagId}}`,
+      filters: `tags[contains]${tagId}`,
     },
   });
-
-  console.log(pageNum);
-  console.log(data);
 
   const blogs = data.contents;
   const totalCount = data.totalCount;

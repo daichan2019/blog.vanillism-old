@@ -3,6 +3,7 @@ import { PER_PAGE } from '@/config/index';
 
 type Props = {
   totalCount: number;
+  currentPage?: number;
 };
 
 export const Pagination = ({ totalCount }: Props) => {
