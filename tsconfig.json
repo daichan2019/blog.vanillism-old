@@ -7,6 +7,7 @@
       "@/lib/*": ["./src/lib/*"],
       "@/config/*": ["./src/config/*"],
       "@/api/*": ["./src/api/*"],
+      "@/utils/*": ["./src/utils/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/public/*": ["./public/*"]
     },

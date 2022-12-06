@@ -8,9 +8,11 @@ import type { EndPoints } from '@/lib/cms/types';
 type Props = {
   blogs: EndPoints['get']['blogs'][];
   totalCount: number;
+  currentPage: number;
 };
 
-export const Articles: FC<Props> = ({ blogs, totalCount }) => {
+export const Articles: FC<Props> = ({ blogs, currentPage, totalCount }) => {
+  console.log(blogs);
   return (
     <DefaultLayout>
       <h2 className='border-b-[1px] md:leading-10 text-3xl font-extrabold sm:text-4xl sm:leading-10 md:text-6xl pb-6'>
