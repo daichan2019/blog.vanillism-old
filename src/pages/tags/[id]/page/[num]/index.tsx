@@ -69,5 +69,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       currentPage: pageNum,
       pagePath: 'tags',
     },
+    revalidate: 60,
   };
 };

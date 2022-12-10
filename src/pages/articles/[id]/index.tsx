@@ -48,5 +48,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       blog,
       highlightedBody: $.html(),
     },
+    revalidate: 60,
   };
 };

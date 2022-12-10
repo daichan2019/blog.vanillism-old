@@ -92,14 +92,6 @@ interface authors_socialMedia {
    * URL
    */
   url: string;
-  /**
-   * アイコン
-   */
-  icon: { url: string; width: number; height: number };
-  /**
-   * アバター
-   */
-  avatar?: { url: string; width: number; height: number };
 }
 
 export interface EndPoints {

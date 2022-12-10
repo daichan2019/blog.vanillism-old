@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { FC } from 'react';
 
 import { DefaultLayout } from '@/components/layout/DefaultLayout';
@@ -16,9 +17,16 @@ export const Me: FC<Props> = ({ author }) => {
       <h2 className='border-b-[1px] md:leading-10 text-3xl font-extrabold sm:text-4xl sm:leading-10 md:text-6xl pb-6'>
         About Me
       </h2>
-      <div className='py-8 flex flex-col sm:flex-row gap-6'>
-        <div>
-          <p className='text-2xl md:text-3xl font-bold'>{author.name}</p>
+      <div className='py-8 flex flex-col sm:flex-row gap-6 sm:gap-10'>
+        <div className='flex flex-col items-center'>
+          <Image
+            src='/img/orange.jpg'
+            className='rounded-full'
+            height={164}
+            width={164}
+            alt={author.name}
+          />
+          <p className='text-2xl md:text-3xl font-bold mt-4'>{author.name}</p>
           <ul className='mt-6 flex space-x-4'>
             {socialMedias.map((social) => {
               return (

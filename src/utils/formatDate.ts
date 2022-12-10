@@ -1,11 +1,5 @@
-export const formatDate = (date: string) => {
-  const options = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
+import dayjs from 'dayjs';
 
-  const now = new Date(date).toLocaleDateString('en-US', options);
-
-  return now;
+export const formatDate = (date: string): string => {
+  return dayjs(date).format('YYYY/MM/DD');
 };

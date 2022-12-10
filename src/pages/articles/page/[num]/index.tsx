@@ -48,5 +48,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: { blogs, totalCount, pagePath: 'articles', currentPage: pageNum },
+    revalidate: 60,
   };
 };

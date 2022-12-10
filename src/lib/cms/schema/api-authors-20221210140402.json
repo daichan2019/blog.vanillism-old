@@ -51,18 +51,10 @@
           "name": "URL",
           "kind": "text",
           "required": true
-        },
-        {
-          "idValue": "hp5zHRZuy1",
-          "fieldId": "icon",
-          "name": "アイコン",
-          "kind": "media",
-          "required": true
-        },
-        { "idValue": "2Exz-aQPtB", "fieldId": "avatar", "name": "アバター", "kind": "media" }
+        }
       ],
       "position": [["XT_YTQe2LR", "F2uGcUgsAl", "hp5zHRZuy1", "2Exz-aQPtB"]],
-      "updatedAt": "2022-11-28T12:44:58.512Z",
+      "updatedAt": "2022-12-10T05:01:35.322Z",
       "viewerGroup": "Dkn"
     }
   ]
