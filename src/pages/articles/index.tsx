@@ -7,8 +7,8 @@ import { client } from '@/lib/cms/utils';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const ArticlesPage: NextPage<Props> = ({ blogs, totalCount }) => {
-  return <Articles blogs={blogs} totalCount={totalCount} />;
+const ArticlesPage: NextPage<Props> = ({ blogs, pagePath, totalCount }) => {
+  return <Articles blogs={blogs} totalCount={totalCount} pagePath={pagePath} />;
 };
 
 export default ArticlesPage;
@@ -20,6 +20,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const totalCount = data.totalCount;
 
   return {
-    props: { blogs, totalCount },
+    props: { blogs, totalCount, pagePath: 'articles' },
   };
 };

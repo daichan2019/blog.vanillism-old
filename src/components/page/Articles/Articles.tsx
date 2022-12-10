@@ -13,7 +13,7 @@ type Props = {
   pagePath?: string;
 };
 
-export const Articles: FC<Props> = ({ blogs, pagePath, totalCount }) => {
+export const Articles: FC<Props> = ({ blogs, currentPage, pagePath, totalCount }) => {
   return (
     <DefaultLayout>
       <h2 className='border-b-[1px] md:leading-10 text-3xl font-extrabold sm:text-4xl sm:leading-10 md:text-6xl pb-6'>
@@ -29,7 +29,11 @@ export const Articles: FC<Props> = ({ blogs, pagePath, totalCount }) => {
         })}
       </ul>
       {totalCount > PER_PAGE && (
-        <Pagination totalCount={totalCount} pagePath={pagePath as string} />
+        <Pagination
+          totalCount={totalCount}
+          pagePath={pagePath as string}
+          currentPage={currentPage}
+        />
       )}
     </DefaultLayout>
   );

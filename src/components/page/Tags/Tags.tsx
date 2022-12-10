@@ -24,7 +24,7 @@ export const Tags: FC<Props> = ({ tags }) => {
   const count = tagNameArr.reduce((prev, current) => {
     prev[current] = (prev[current] || 0) + 1;
     return prev;
-  }, {});
+  }, {} as any);
 
   return (
     <DefaultLayout>
