@@ -1,9 +1,9 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
 const MyDocument = () => {
-  const title = 'ここにタイトルを入力してください。';
-  const description = 'ここにdescriptionを入力してください。';
-  const url = 'https://example.com';
+  const title = 'blog.vanillism';
+  const description = 'vanillaのBlog 日常から技術までなんでも記事に起こします。';
+  const url = 'https://blog.vanillism.com';
 
   return (
     <Html lang='ja-JP'>
