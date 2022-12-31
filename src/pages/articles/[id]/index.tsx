@@ -5,14 +5,30 @@ import hljs from 'highlight.js';
 import type { NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
 import type { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 
+import { HeadTemplate } from '@/components/functional/HeadTemplate';
 import { Article } from '@/components/page/Article';
 import { client } from '@/lib/cms/utils';
+import { createOgImage } from '@/utils/createOgImage';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const ArticlePage: NextPage<Props> = ({ blog, highlightedBody }) => {
-  return <Article blog={blog} highlightedBody={highlightedBody} />;
+  const router = useRouter();
+  const ogImageUrl = createOgImage(blog.eyecatch.url, blog.title);
+
+  return (
+    <>
+      <HeadTemplate
+        pageTitle={blog.title}
+        pageDescription={blog.title}
+        pagePath={router.asPath}
+        postImg={ogImageUrl}
+      />
+      <Article blog={blog} highlightedBody={highlightedBody} />
+    </>
+  );
 };
 
 export default ArticlePage;

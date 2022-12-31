@@ -1,7 +1,9 @@
 import type { InferGetStaticPropsType } from 'next';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 
+import { HeadTemplate } from '@/components/functional/HeadTemplate';
 import { Articles } from '@/components/page/Articles';
 import { PER_PAGE } from '@/config/index';
 import { client } from '@/lib/cms/utils';
@@ -15,8 +17,18 @@ const ArticlesFilteredByTagPage: NextPage<Props> = ({
   pagePath,
   totalCount,
 }) => {
+  const router = useRouter();
+
   return (
-    <Articles blogs={blogs} totalCount={totalCount} currentPage={currentPage} pagePath={pagePath} />
+    <>
+      <HeadTemplate pageTitle='Tags' pagePath={router.asPath} />
+      <Articles
+        blogs={blogs}
+        totalCount={totalCount}
+        currentPage={currentPage}
+        pagePath={pagePath}
+      />
+    </>
   );
 };
 
@@ -66,8 +78,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       blogs,
       totalCount,
+      tagId,
       currentPage: pageNum,
-      pagePath: 'tags',
+      pagePath: `tags/${tagId}`,
     },
     revalidate: 60,
   };

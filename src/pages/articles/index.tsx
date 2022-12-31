@@ -1,6 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
+import { useRouter } from 'next/router';
 
+import { HeadTemplate } from '@/components/functional/HeadTemplate';
 import { Articles } from '@/components/page/Articles';
 import { PER_PAGE } from '@/config/index';
 import { client } from '@/lib/cms/utils';
@@ -8,8 +10,18 @@ import { client } from '@/lib/cms/utils';
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const ArticlesPage: NextPage<Props> = ({ blogs, currentPage, pagePath, totalCount }) => {
+  const router = useRouter();
+
   return (
-    <Articles blogs={blogs} totalCount={totalCount} pagePath={pagePath} currentPage={currentPage} />
+    <>
+      <HeadTemplate pageTitle='Articles' pagePath={router.asPath} />
+      <Articles
+        blogs={blogs}
+        totalCount={totalCount}
+        pagePath={pagePath}
+        currentPage={currentPage}
+      />
+    </>
   );
 };
 
