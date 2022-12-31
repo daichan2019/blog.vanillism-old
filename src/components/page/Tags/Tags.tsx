@@ -21,10 +21,13 @@ export const Tags: FC<Props> = ({ tags }) => {
     ),
   ];
 
-  const count = tagNameArr.reduce((prev, current) => {
-    prev[current] = (prev[current] || 0) + 1;
-    return prev;
-  }, {} as any);
+  const count: { [key: string]: number } = tagNameArr.reduce(
+    (prev: { [key: string]: number }, current) => {
+      prev[current] = (prev[current] || 0) + 1;
+      return prev;
+    },
+    {},
+  );
 
   return (
     <DefaultLayout>

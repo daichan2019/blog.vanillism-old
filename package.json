@@ -44,6 +44,7 @@
     "@aspida/fetch": "^1.11.0",
     "@aspida/swr": "^1.11.0",
     "@headlessui/react": "^1.7.4",
+    "base64url": "^3.0.1",
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.7",
