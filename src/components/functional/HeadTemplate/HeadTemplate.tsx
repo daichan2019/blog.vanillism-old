@@ -34,7 +34,6 @@ export const HeadTemplate: FC<Type> = ({
 
   return (
     <Head>
-      <html lang='ja' />
       <title>{title}</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width,initial-scale=1' />
@@ -55,7 +54,6 @@ export const HeadTemplate: FC<Type> = ({
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={imgurl} />
-
       <link rel='canonical' href={url} />
     </Head>
   );
