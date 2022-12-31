@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { formatDate } from 'src/utils/formatDate';
 
+import { DynamicThumbnail } from '@/components/functional/DynamicThumbnail';
 import { DefaultLayout } from '@/components/layout/DefaultLayout';
 import { Tag } from '@/components/model/tag/Tag';
 import type { EndPoints } from '@/lib/cms/types';
@@ -13,7 +14,8 @@ type Props = {
 export const Article: FC<Props> = ({ blog, highlightedBody }) => {
   return (
     <DefaultLayout>
-      <h2 className='my-2 text-2xl font-extrabold leading-9 tracking-tight sm:my-3 sm:text-3xl sm:leading-10 md:my-4 md:text-4xl'>
+      <DynamicThumbnail thumbnailUrl={blog.eyecatch.url} title={blog.title} />
+      <h2 className='my-2 xl:my-4 text-2xl font-extrabold leading-9 tracking-tight sm:my-3 sm:text-3xl sm:leading-10 md:my-4 md:text-4xl'>
         {blog.title}
       </h2>
       <time className='text-gray-600' dateTime={blog.createdAt}>

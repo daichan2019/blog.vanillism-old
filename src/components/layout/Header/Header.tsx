@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { FC } from 'react';
 import { useDisclosure } from 'src/hooks/useDisclosure';
 
@@ -12,10 +13,11 @@ export const Header: FC = () => {
   return (
     <>
       <header>
-        <div className='py-6 flex xl:max-w-5xl justify-between mx-auto max-w-3xl px-4 sm:px-6 xl:px-0'>
+        <div className='py-6 flex xl:max-w-5xl justify-between items-center mx-auto max-w-3xl px-4 sm:px-6 xl:px-0'>
           <h1 className='text-xl md:text-2xl font-bold'>
-            <Anchor as='internal' href='/'>
-              blog.vanillism
+            <Anchor as='internal' href='/' className='flex gap-2 items-center'>
+              <Image src='/img/orange.jpg' className='rounded-full' height={32} width={32} alt='' />
+              <span>blog.vanillsm</span>
             </Anchor>
           </h1>
           <nav className='hidden sm:block'>

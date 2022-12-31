@@ -1,13 +1,19 @@
 import type { GetStaticProps, NextPage } from 'next';
 import type { InferGetStaticPropsType } from 'next';
 
+import { HeadTemplate } from '@/components/functional/HeadTemplate';
 import { Top } from '@/components/page/Top';
 import { client } from '@/lib/cms/utils';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const Home: NextPage<Props> = ({ blogs }) => {
-  return <Top blogs={blogs} />;
+  return (
+    <>
+      <HeadTemplate />
+      <Top blogs={blogs} />
+    </>
+  );
 };
 
 export default Home;

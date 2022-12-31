@@ -15,10 +15,10 @@ const MyDocument = () => {
         <meta property='og:url' content={url} />
         <meta property='og:description' content={description} />
         <meta property='og:site_name' content={title} />
-        <meta property='og:image' content={`${url}/ogp.png`} />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='format-detection' content='telephone=no' />
-        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+        <link rel='apple-touch-icon' href='/img/apple-touch-icon.png' />
+        <link rel='icon' href='/img/favicon.ico' />
       </Head>
       <body>
         <Main />
