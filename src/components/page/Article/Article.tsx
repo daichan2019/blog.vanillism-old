@@ -21,7 +21,7 @@ export const Article: FC<Props> = ({ blog, highlightedBody }) => {
       <time className='text-gray-600' dateTime={blog.createdAt}>
         {formatDate(blog.createdAt)}
       </time>
-      <ul className='my-2 flex gap-2'>
+      <ul className='my-2 flex gap-2 flex-wrap'>
         {blog.tags.map((tag) => {
           return (
             <li key={tag.id}>

@@ -2,6 +2,6 @@
 **/out/*
 **/.next/*
 src/lib/cms/api/**/*
-**/$api.ts
+**/**/$api.ts
 src/lib/cms/schema/*
 src/lib/cms/types/*
