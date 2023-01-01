@@ -17,7 +17,7 @@ export const Header: FC = () => {
           <h1 className='text-xl md:text-2xl font-bold'>
             <Anchor as='internal' href='/' className='flex gap-2 items-center'>
               <Image src='/img/orange.jpg' className='rounded-full' height={32} width={32} alt='' />
-              <span>blog.vanillsm</span>
+              <span>blog.vanillism</span>
             </Anchor>
           </h1>
           <nav className='hidden sm:block'>
