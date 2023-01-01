@@ -60,7 +60,7 @@
     "@tailwindcss/typography": "0.5.8",
     "@types/cheerio": "^0.22.31",
     "@types/highlightjs": "^9.12.2",
-    "@types/node": "18.11.9",
+    "@types/node": "18.11.18",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.10",
     "@typescript-eslint/eslint-plugin": "5.42.0",
