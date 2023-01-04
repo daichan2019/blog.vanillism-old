@@ -78,7 +78,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       blogs,
       totalCount,
-      tagId,
       currentPage: pageNum,
       pagePath: `tags/${tagId}`,
     },
