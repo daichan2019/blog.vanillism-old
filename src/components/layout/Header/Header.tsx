@@ -12,7 +12,7 @@ export const Header: FC = () => {
 
   return (
     <>
-      <header>
+      <header className='sticky top-0 w-full bg-neutral-50'>
         <div className='py-6 flex xl:max-w-5xl justify-between items-center mx-auto max-w-3xl px-4 sm:px-6 xl:px-0'>
           <h1 className='text-xl md:text-2xl font-bold'>
             <Anchor as='internal' href='/' className='flex gap-2 items-center'>
