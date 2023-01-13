@@ -57,7 +57,7 @@
     "@svgr/webpack": "^6.5.1",
     "@tailwindcss/forms": "0.5.3",
     "@tailwindcss/line-clamp": "0.4.2",
-    "@tailwindcss/typography": "0.5.8",
+    "@tailwindcss/typography": "0.5.9",
     "@types/cheerio": "^0.22.31",
     "@types/highlightjs": "^9.12.2",
     "@types/node": "18.11.9",
