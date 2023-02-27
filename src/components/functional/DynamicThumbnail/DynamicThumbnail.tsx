@@ -23,7 +23,7 @@ export const DynamicThumbnail: FC<Props> = ({
           `https://assets.imgix.net/~text?txtsize=48&txt-color=000&w=${
             width - 80
           }&txt-align=middle&txtfont=Hiragino%20Sans%20W6&txt-track=2&txt64=${base64url(title)}`,
-        )}&blend-mode=normal&blend-align=top,left&blend-x=40&blend-y=100`}
+        )}&blend-mode=normal&blend-align=top,left&blend-x=70&blend-y=100`}
         media='(min-width: 1400px)'
         type='image/webp'
       />
