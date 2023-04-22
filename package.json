@@ -59,7 +59,7 @@
     "@types/cheerio": "^0.22.31",
     "@types/highlightjs": "^9.12.2",
     "@types/node": "18.15.13",
-    "@types/react": "18.0.35",
+    "@types/react": "18.0.38",
     "@types/react-dom": "18.0.11",
     "@typescript-eslint/eslint-plugin": "5.58.0",
     "@typescript-eslint/parser": "5.58.0",
