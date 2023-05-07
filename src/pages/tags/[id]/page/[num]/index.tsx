@@ -56,7 +56,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const paths = resPaths.flat();
 
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
